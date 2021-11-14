@@ -6,7 +6,7 @@
 -- @module pl.utils
 local format = string.format
 local compat = require 'pl.compat'
-local stdout = function(...) end
+local stdout = { write = function() end } --io.stdout
 local append = table.insert
 local unpack = rawget(_G,'unpack') or rawget(table,'unpack')
 
